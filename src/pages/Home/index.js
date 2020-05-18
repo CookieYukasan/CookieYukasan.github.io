@@ -13,13 +13,8 @@ export default function Home() {
   });
 
   function handleChangeTheme() {
-    if (theme === "dark") {
-      _setTheme("light");
-      localStorage.setItem("theme", "light");
-    } else {
-      _setTheme("dark");
-      localStorage.setItem("theme", "dark");
-    }
+    _setTheme(theme === "dark" ? "light" : "dark");
+    localStorage.setItem("theme", theme === "dark" ? "light" : "dark");
   }
 
   return (
